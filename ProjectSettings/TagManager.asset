@@ -6,7 +6,8 @@ TagManager:
   tags:
   - PlayerCard
   - EnemyCard
-  - PlayerManager
+  - Played
+  - Zoom
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,8 @@ using Mirror;
 public class DragDrop : NetworkBehaviour
 {
     public GameObject Canvas;
-    public GameObject PlayerManager;
+    public GameObject DropZone;
+    public PlayerManager PlayerManager;
 
     private bool isDragging = false;
     private bool isOverDropZone = false;
@@ -14,9 +15,10 @@ public class DragDrop : NetworkBehaviour
     private GameObject startParent;
     private Vector2 startPosition;
 
-    private void Awake()
+    private void Start()
     {
         Canvas = GameObject.Find("Main Canvas");
+        DropZone = GameObject.Find("DropZone");
     }
     void Update()
     {
@@ -52,8 +54,9 @@ public class DragDrop : NetworkBehaviour
         if (isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
-            PlayerManager.GetComponent<PlayerManager>().SayHello();
-
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+            PlayerManager.CmdPlayCard(gameObject);
         }
         else
         {
@@ -61,4 +64,8 @@ public class DragDrop : NetworkBehaviour
             transform.SetParent(startParent.transform, false);
         }
     }
+
+    //Only drag if hasAuthority?
+    //Card backs for different visibility?
+    //Client Manager?
 }

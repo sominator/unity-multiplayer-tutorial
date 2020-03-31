@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\Scripts\CardZoom.cs" />
+    <Compile Include="Assets\Scripts\DebugLogDisplay.cs" />
     <Compile Include="Assets\Scripts\DragDrop.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />

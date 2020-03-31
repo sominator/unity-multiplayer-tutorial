@@ -9,7 +9,8 @@ public class ButtonClick : NetworkBehaviour
 
     public void OnClick()
     {
-        PlayerManager = GameObject.Find("PlayerManager(Clone)").GetComponent<PlayerManager>();
-        PlayerManager.DealCards();
+        NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+        PlayerManager = networkIdentity.GetComponent<PlayerManager>();
+        PlayerManager.CmdDealCards();
     }
 }

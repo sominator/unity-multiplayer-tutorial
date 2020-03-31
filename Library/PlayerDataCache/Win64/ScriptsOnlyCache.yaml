@@ -3,7 +3,9 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ButtonClick
     - CardZoom
+    - DebugLogDisplay
     - DragDrop
+    - OnSpawn
     - PlayerManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
@@ -80,15 +82,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10878}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11780}
+    - Class: 114
+      Script: {instanceID: 11832}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -400,7 +406,7 @@ ScriptsOnlyBuild:
     className: CardZoom
   - hash:
       serializedVersion: 2
-      Hash: deff9da3bcd4d6a0bdee19f921e026fa
+      Hash: cce7b3b8e451dd2aab6c0d8f5d7ea3a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragDrop
@@ -592,6 +598,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: bb560bc3eec556516d3480ba529763ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DebugLogDisplay
+  - hash:
+      serializedVersion: 2
       Hash: 4bbd1e9a2162b7ff52ffcc90aa74e535
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Pong
@@ -674,6 +686,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnSpawn
   - hash:
       serializedVersion: 2
       Hash: 9b5a106d716e10dbf0635b1180cc5e67
