@@ -7,8 +7,6 @@ public class PlayerManager : NetworkBehaviour
 {
     public GameObject Card1;
     public GameObject Card2;
-    public GameObject Back1;
-    public GameObject Back2;
     public GameObject PlayerArea;
     public GameObject EnemyArea;
     public GameObject DropZone;
@@ -61,11 +59,16 @@ public class PlayerManager : NetworkBehaviour
             else
             {
                 card.transform.SetParent(EnemyArea.transform, false);
+                card.GetComponent<CardFlipper>().Flip();
             }
         }
         else if (type == "Played")
         {
             card.transform.SetParent(DropZone.transform, false);
+            if (!hasAuthority)
+            {
+                card.GetComponent<CardFlipper>().Flip();
+            }
         }
     }
 }

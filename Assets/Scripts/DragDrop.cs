@@ -11,6 +11,7 @@ public class DragDrop : NetworkBehaviour
 
     private bool isDragging = false;
     private bool isOverDropZone = false;
+    private bool isDraggable = true;
     private GameObject dropZone;
     private GameObject startParent;
     private Vector2 startPosition;
@@ -19,6 +20,10 @@ public class DragDrop : NetworkBehaviour
     {
         Canvas = GameObject.Find("Main Canvas");
         DropZone = GameObject.Find("DropZone");
+        if (!hasAuthority)
+        {
+            isDraggable = false;
+        }
     }
     void Update()
     {
@@ -43,6 +48,7 @@ public class DragDrop : NetworkBehaviour
 
     public void StartDrag()
     {
+        if (!isDraggable) return;
         startParent = transform.parent.gameObject;
         startPosition = transform.position;
         isDragging = true;
@@ -50,10 +56,12 @@ public class DragDrop : NetworkBehaviour
 
     public void EndDrag()
     {
+        if (!isDraggable) return;
         isDragging = false;
         if (isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
+            isDraggable = false;
             NetworkIdentity networkIdentity = NetworkClient.connection.identity;
             PlayerManager = networkIdentity.GetComponent<PlayerManager>();
             PlayerManager.CmdPlayCard(gameObject);
@@ -64,8 +72,4 @@ public class DragDrop : NetworkBehaviour
             transform.SetParent(startParent.transform, false);
         }
     }
-
-    //Only drag if hasAuthority?
-    //Card backs for different visibility?
-    //Client Manager?
 }

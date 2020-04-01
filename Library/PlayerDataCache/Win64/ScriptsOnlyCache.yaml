@@ -2,10 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ButtonClick
+    - CardFlipper
     - CardZoom
     - DebugLogDisplay
     - DragDrop
-    - OnSpawn
     - PlayerManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
@@ -88,13 +88,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11612}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 13840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -496,7 +496,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: d12f0900052a7cb4c1e7f5d5ebaa30dc
+      Hash: 3ad6382617c540dc3fbe58f63d4c1b7a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -688,12 +688,6 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OnSpawn
-  - hash:
-      serializedVersion: 2
       Hash: 9b5a106d716e10dbf0635b1180cc5e67
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Chat
@@ -836,6 +830,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 592a1672b0b600d35bad890f222bcc4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CardFlipper
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
