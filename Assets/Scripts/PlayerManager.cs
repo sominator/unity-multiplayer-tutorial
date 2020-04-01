@@ -13,6 +13,9 @@ public class PlayerManager : NetworkBehaviour
 
     List<GameObject> cards = new List<GameObject>();
 
+    [SyncVar]
+    int cardsPlayed = 0;
+
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -20,7 +23,6 @@ public class PlayerManager : NetworkBehaviour
         PlayerArea = GameObject.Find("PlayerArea");
         EnemyArea = GameObject.Find("EnemyArea");
         DropZone = GameObject.Find("DropZone");
-        Debug.Log("Found Objects");
     }
 
     [Server]
@@ -39,6 +41,13 @@ public class PlayerManager : NetworkBehaviour
             NetworkServer.Spawn(card, connectionToClient);
             RpcShowCard(card, "Dealt");
         }
+    }
+
+    public void PlayCard(GameObject card)
+    {
+        CmdPlayCard(card);
+        cardsPlayed++;
+        Debug.Log(cardsPlayed);
     }
 
     [Command]

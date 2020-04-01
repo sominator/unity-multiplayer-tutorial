@@ -82,19 +82,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10878}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11090}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 13840}
+      Script: {instanceID: 11832}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -562,6 +562,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 592a1672b0b600d35bad890f222bcc4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CardFlipper
+  - hash:
+      serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -830,12 +836,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 592a1672b0b600d35bad890f222bcc4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CardFlipper
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
